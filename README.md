@@ -6,7 +6,12 @@
 huyunch
 ==========
 
-huyunch is a fork of David Schoonover's **Bunch** package, providing similar functionality. 99% of the work was done by him, and the fork was made mainly for lack of responsiveness for fixes and maintenance on the original code.
+huyunch is a fork of David Schoonover's **Bunch** package similar to: 
+* https://github.com/dsc/bunch
+* https://libraries.io/pypi/neobunch
+* https://github.com/Infinidat/munch
+
+David Schoonover's **Bunch** package, providing similar functionality. 99% of the work was done by him, and the fork was made mainly for lack of responsiveness for fixes and maintenance on the original code.
 
 Huyunch is a dictionary that supports attribute-style access, a la JavaScript.
 
