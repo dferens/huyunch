@@ -1,4 +1,4 @@
-from munch import Munch
+from huyunch import Munch
 try:
     import yaml
 except ImportError:
@@ -7,8 +7,8 @@ except ImportError:
 
 def test_from_yaml():
     data = yaml.load('''
-    Flow style: !munch.Munch { Clark: Evans, Brian: Ingerson, Oren: Ben-Kiki }
-    Block style: !munch
+    Flow style: !huyunch.Munch { Clark: Evans, Brian: Ingerson, Oren: Ben-Kiki }
+    Block style: !huyunch
       Clark : Evans
       Brian : Ingerson
       Oren  : Ben-Kiki
@@ -28,12 +28,12 @@ def test_to_yaml_safe():
 def test_to_yaml():
     b = Munch(foo=['bar', Munch(lol=True)], hello=42)
     dumped = yaml.dump(b, default_flow_style=True)
-    assert dumped == '!munch.Munch {foo: [bar, !munch.Munch {lol: true}], hello: 42}\n'
+    assert dumped == '!huyunch.Munch {foo: [bar, !munch.Munch {lol: true}], hello: 42}\n'
 
 
 def test_toYAML():
     b = Munch(foo=['bar', Munch(lol=True)], hello=42)
     assert yaml.safe_dump(b, default_flow_style=True) == '{foo: [bar, {lol: true}], hello: 42}\n'
     assert b.toYAML(default_flow_style=True) == '{foo: [bar, {lol: true}], hello: 42}\n'
-    assert yaml.dump(b, default_flow_style=True) == '!munch.Munch {foo: [bar, !munch.Munch {lol: true}], hello: 42}\n'
-    assert b.toYAML(Dumper=yaml.Dumper, default_flow_style=True) == '!munch.Munch {foo: [bar, !munch.Munch {lol: true}], hello: 42}\n'
+    assert yaml.dump(b, default_flow_style=True) == '!huyunch.Munch {foo: [bar, !munch.Munch {lol: true}], hello: 42}\n'
+    assert b.toYAML(Dumper=yaml.Dumper, default_flow_style=True) == '!huyunch.Munch {foo: [bar, !munch.Munch {lol: true}], hello: 42}\n'

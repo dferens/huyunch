@@ -1,7 +1,7 @@
 import json
 import pickle
 import pytest
-from munch import DefaultFactoryMunch, AutoMunch, DefaultMunch, Munch, munchify, unmunchify
+from huyunch import DefaultFactoryMunch, AutoMunch, DefaultMunch, Munch, munchify, unmunchify
 
 
 def test_base():

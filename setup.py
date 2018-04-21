@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 HERE = abspath(dirname(__file__))
 readme = open(join(HERE, 'README.md')).read()
 
-package_file = open(join(HERE, 'munch', '__init__.py'), 'rU')
+package_file = open(join(HERE, 'huyunch', '__init__.py'), 'rU')
 __version__ = re.sub(
     r".*\b__version__\s+=\s+'([^']+)'.*",
     r'\1',
@@ -19,13 +19,13 @@ setup(
     version=__version__,
     description="A dot-accessible dictionary (a la JavaScript objects).",
     url="http://github.com/Infinidat/munch",
-    author="Rotem Yaari",
-    author_email="vmalloc@gmail.com",
+    author="Dmitriy Ferens",
+    author_email="ferensdima@gmail.com",
     install_requires=[
         'six',
     ],
     packages=find_packages(exclude=["tests"]),
-    keywords=['munch', 'dict', 'mapping', 'container', 'collection'],
+    keywords=['huyunch', 'dict', 'mapping', 'container', 'collection'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',

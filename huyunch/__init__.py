@@ -1,4 +1,4 @@
-""" Munch is a subclass of dict with attribute-style access.
+""" Huyunch is a subclass of dict with attribute-style access.
 
     >>> b = Munch()
     >>> b.hello = 'world'
